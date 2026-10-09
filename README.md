@@ -45,10 +45,11 @@ entre distância e PIB per capita.
 ## 4. Bancos de Dados e Análise Espacial
 
 * A organização do banco de dados seguiu quatro etapas:
-  - Padronização e tratamento dos dados tabulares;
-  - Integração com a base geoespacial municipal;
-  - Definição do método de classificação e da simbologia cartográfica;
-  - Análise estatística de correlação entre os indicadores.
+  - Padronização e tratamento dos dados tabulares em Excel e R;
+  - Uso de PostgreeSQL/PostGIS na calculadora de campo para a criação de novas colunas na tabela de atributos contendo as fórmulas epidemiológicas e estatísticas dos indicadores citados no tópico 2;
+  - Integração com a base geoespacial municipal através da função join com o código municipal do IBGE;
+  - Definição do método de classificação e da simbologia cartográfica - uso de mapas coropléticos bivariados;
+  - Análise estatística de correlação de pearson e significância (p<0,05) entre os indicadores.
 
 * Para a análise espacial conjunta dos determinantes de saúde, foram elaborados mapas coropléticos bivariados cruzando a taxa de mortalidade infantil com cinco covariáveis do estudo: PIB per capita, cobertura potencial da Atenção Primária à Saúde, acessibilidade geográfica, escolaridade materna e cobertura de pré-natal. Nessa etapa, cada indicador foi dividido em tercis — baixo, médio e alto —, formando uma legenda em matriz com nove classes de cores (3×3). Portanto, o método utilizado nos mapas bivariados é o dos tercis.
 * As tabelas foram consolidadas em uma planilha-mestre única, utilizando o código do município como chave de junção comum a todas as fontes. O resultado é uma tabela de atributos com 22 linhas e uma coluna por indicador, importada e tratada diretamente no QGIS. Por trabalhar com dados brutos, muitas informações estavam em números absolutos, e para evitar erros, diversas correções precisaram ser feita no banco de dados utilizando a Calculadora de Campo nativa do QGIS, em ambiente SQL, para realizar a correção, síntese e a organização dos dados para a confecção dos indicadores e posterior síntese dos mapas. 
@@ -90,9 +91,10 @@ entre distância e PIB per capita.
 
 ---
 
-## 7. Bibliografia
+## 7. Bibliografia e Geopackage
 ![bibliografia.jpg](Bibliografia.jpg)
 
 * Para quem quiser se aprofundar na temática, disponibilizo a bibliografia utilizada para a confecção desse trabalho.
+* O Geopackage compactado com todos os arquivos está disponível [aqui](mort_infantil_AC2022.7z). Fique a vontade para reproduzi-lo em seu ambiente SIG de preferência, mas caso utilize-o de forma pública, cite a fonte.
 
 ### **Obrigado!**
