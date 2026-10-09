@@ -1,3 +1,5 @@
+[🇺🇸 English](README.md) | [🇧🇷 Português](README-pt.md)
+
 # Mortalidade Infantil no Acre e Seus Condicionantes (2022)
 ### Análise Espacial e Estatística da Mortalidade Infantil no Acre (2022) - Um estudo das condições socioeconômicas e do acesso a serviços públicos
 ![capa](capa.png)
